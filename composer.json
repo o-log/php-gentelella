@@ -5,6 +5,9 @@
     "o-log/php-lib" : "1.*",
     "o-log/php-router" : "1.*"
   },
+  "require-dev" : {
+    "o-log/php-bt" : "3.*"
+  },
   "autoload" : {
     "psr-0" : {
       "OLOG" : ""
