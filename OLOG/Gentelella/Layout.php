@@ -1,10 +1,10 @@
 <?php
 
-namespace OLOG\BT;
+namespace OLOG\Gentelella;
 
 use OLOG\BT;use OLOG\ConfWrapper;use OLOG\Sanitize;
 
-class LayoutGentellela
+class Layout
 {
 
 static public function render($content_html, $action_obj = null){

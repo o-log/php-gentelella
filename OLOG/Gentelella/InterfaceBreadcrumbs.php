@@ -1,6 +1,6 @@
 <?php
 
-namespace OLOG\BT;
+namespace OLOG\Gentelella;
 
 interface InterfaceBreadcrumbs
 {
