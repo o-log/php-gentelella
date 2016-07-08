@@ -114,6 +114,7 @@ if ($menu_classes_arr){
 					</div>
 				</div>
 				<!-- /menu prile quick info -->
+				<div class="clearfix"></div>
 
 				<br />
 
@@ -243,25 +244,14 @@ if ($menu_classes_arr){
 
 		<!-- page content -->
 		<div class="right_col" role="main">
-
-			<?php
-			if (!empty($breadcrumbs_arr)){
-				echo BT::breadcrumbs($breadcrumbs_arr);
-			}
-			?>
+			<div class="clearfix"></div>
 			<div class="page-title">
-				<div class="title_left">
-					<h3><?= $h1_str ?></h3>
-				</div>
-				<div class="title_right">
-					<div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-						<div class="input-group">
-							<input type="text" class="form-control" placeholder="Search for...">
-                  <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">Go!</button>
-                        </span>
-						</div>
-					</div>
+				<div class="title">
+					<?php
+					if (!empty($breadcrumbs_arr)){
+						echo BT::breadcrumbs($breadcrumbs_arr);
+					}
+					?>
 				</div>
 			</div>
 			<div class="clearfix"></div>
@@ -300,7 +290,7 @@ if ($menu_classes_arr){
 		<!-- /page content -->
 
 		<!-- footer content -->
-		<footer>
+		<footer style="margin-top: -11px;">
 			<div class="pull-right">
 				<span class="fa fa-github"></span> <a target="_blank" href="https://github.com/o-log">o-log</a>
 			</div>
