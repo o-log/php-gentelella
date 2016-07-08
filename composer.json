@@ -2,6 +2,7 @@
   "name": "o-log/php-gentelella",
   "description": "Bootstrap Theme",
   "require" : {
+    "o-log/php-bt" : "3.*",
     "o-log/php-lib" : "1.*",
     "o-log/php-router" : "1.*"
   },

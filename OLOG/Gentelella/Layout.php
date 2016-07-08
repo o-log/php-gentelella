@@ -15,15 +15,15 @@ $application_title = ConfWrapper::value('php-bt.application_title', 'Application
 $user_name = 'User Name';
 
 if ($action_obj){
-	if ($action_obj instanceof InterfaceBreadcrumbs){
+	if ($action_obj instanceof BT\InterfaceBreadcrumbs){
 		$breadcrumbs_arr = $action_obj->currentBreadcrumbsArr();
 	}
 
-	if ($action_obj instanceof InterfacePageTitle){
+	if ($action_obj instanceof BT\InterfacePageTitle){
 		$h1_str = $action_obj->currentPageTitle();
 	}
 
-	if ($action_obj instanceof InterfaceUserName){
+	if ($action_obj instanceof BT\InterfaceUserName){
 		$user_name = $action_obj->currentUserName();
 	}
 }
@@ -31,7 +31,7 @@ if ($action_obj){
 $menu_classes_arr = ConfWrapper::value('php-bt.menu_classes_arr', []); // TODO: key name to constant
 if ($menu_classes_arr){
 	foreach ($menu_classes_arr as $menu_class){
-		if (in_array(InterfaceMenu::class, class_implements($menu_class))){
+		if (in_array(BT\InterfaceMenu::class, class_implements($menu_class))){
 			$menu_arr = array_merge($menu_arr, $menu_class::menuArr());
 		}
 	}
