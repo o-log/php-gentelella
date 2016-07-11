@@ -30,6 +30,6 @@ class DemoAction implements InterfaceBreadcrumbs, InterfacePageTitle, BT\Interfa
     public function action(){
         $html = '<div>TEST CONTENT</div>';
 
-        \OLOG\BT\Layout::render($html, $this);
+        \OLOG\Gentelella\Layout::render($html, $this);
     }
 }
