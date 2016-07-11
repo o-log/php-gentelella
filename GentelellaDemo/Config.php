@@ -1,6 +1,6 @@
 <?php
 
-namespace BTDemo;
+namespace GentelellaDemo;
 
 class Config
 {
@@ -13,7 +13,7 @@ class Config
         $conf['php-bt'] = [
             'layout_theme' => \OLOG\Gentelella\Layout::class,
             'menu_classes_arr' => [
-                BTDemoMenu::class
+                DemoMenu::class
             ]
         ];
 

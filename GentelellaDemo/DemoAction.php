@@ -1,6 +1,6 @@
 <?php
 
-namespace BTDemo;
+namespace GentelellaDemo;
 
 use OLOG\BT;
 use OLOG\BT\InterfaceBreadcrumbs;

@@ -2,6 +2,6 @@
 
 require_once '../vendor/autoload.php';
 
-\OLOG\ConfWrapper::assignConfig(\BTDemo\Config::get());
+\OLOG\ConfWrapper::assignConfig(\GentelellaDemo\Config::get());
 
-\OLOG\Router::matchAction(\BTDemo\DemoAction::class, 0);
+\OLOG\Router::matchAction(\GentelellaDemo\DemoAction::class, 0);
