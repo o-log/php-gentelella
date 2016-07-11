@@ -1,6 +1,6 @@
 {
   "name": "o-log/php-gentelella",
-  "description": "Bootstrap Theme",
+  "description": "PHP wrapper - Bootstrap Theme Gentelella",
   "require" : {
     "o-log/php-lib" : "1.*",
     "o-log/php-router" : "1.*"
