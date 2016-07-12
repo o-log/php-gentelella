@@ -59,9 +59,9 @@ if ($menu_classes_arr){
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet">
 
 	<style>
-		.page-title {height: auto;}
-		.breadcrumb {margin:0;background-color: transparent;}
+		.breadcrumb {margin: 8px 0;padding: 0;background-color: transparent;}
 		.breadcrumb .title {font-size: 20px;}
+		.page-title {height: auto;margin: 8px 0 20px;padding: 0;}
 	</style>
 
 	<!--<link href="/bower_components/gentelella/production/css/animate.min.css" rel="stylesheet">-->
@@ -251,13 +251,14 @@ if ($menu_classes_arr){
 		<!-- page content -->
 		<div class="right_col" role="main">
 			<div class="clearfix"></div>
+			<?php
+			if (!empty($breadcrumbs_arr)){
+				echo BT::breadcrumbs($breadcrumbs_arr);
+			}
+			?>
 			<div class="page-title">
 				<div class="title">
-					<?php
-					if (!empty($breadcrumbs_arr)){
-						echo BT::breadcrumbs($breadcrumbs_arr);
-					}
-					?>
+					<h3><?= $h1_str ?></h3>
 				</div>
 			</div>
 			<div class="clearfix"></div>

@@ -15,7 +15,7 @@ class DemoAction implements InterfaceBreadcrumbs, InterfacePageTitle, BT\Interfa
 
     public function currentBreadcrumbsArr()
     {
-		return array_merge([BT::a('/', '', 'glyphicon glyphicon-home')], [BT::a('/admin/', '', 'glyphicon glyphicon-wrench')], [BT::a(self::getUrl(), self::currentPageTitle(), 'title')]);
+		return array_merge([BT::a('/', '', 'glyphicon glyphicon-home')], [BT::a('/admin/', '', 'glyphicon glyphicon-wrench')]);
     }
 
     public function currentPageTitle()
