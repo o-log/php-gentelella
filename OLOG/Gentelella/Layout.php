@@ -58,6 +58,12 @@ if ($menu_classes_arr){
 	<!--<link href="/bower_components/gentelella/production/fonts/css/font-awesome.min.css" rel="stylesheet">-->
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet">
 
+	<style>
+		.page-title {height: auto;}
+		.breadcrumb {margin:0;background-color: transparent;}
+		.breadcrumb .title {font-size: 20px;}
+	</style>
+
 	<!--<link href="/bower_components/gentelella/production/css/animate.min.css" rel="stylesheet">-->
 
 	<!-- Custom styling plus plugins -->

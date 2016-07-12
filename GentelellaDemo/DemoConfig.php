@@ -2,7 +2,7 @@
 
 namespace GentelellaDemo;
 
-class Config
+class DemoConfig
 {
     public static function get()
     {
