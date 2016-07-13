@@ -10,11 +10,16 @@ class Layout
 {
 
 static public function render($content_html, $action_obj = null){
-$breadcrumbs_arr = [];
 $h1_str = '';
 $menu_arr = [];
-$application_title = ConfWrapper::value('php-bt.application_title', 'Application'); // TODO: key name to constant
+$application_title = ConfWrapper::getOptionalValue(\OLOG\BT\BTConstants::MODULE_NAME . '.application_title', 'Application'); // TODO: key name to constant
 $user_name = 'User Name';
+
+$breadcrumbs_arr = [];
+$breadcrumbs_prefixes_arr = ConfWrapper::getOptionalValue(\OLOG\BT\BTConstants::MODULE_NAME . '.' . \OLOG\BT\BTConstants::BREADCRUMBS_PREFIX_ARR, []);
+foreach ($breadcrumbs_prefixes_arr as $breadcrumbs_prefix_arr) {
+    $breadcrumbs_arr = array_merge($breadcrumbs_arr, $breadcrumbs_prefix_arr);
+}
 
 if ($action_obj) {
     if ($action_obj instanceof BT\InterfaceBreadcrumbs) {
@@ -30,7 +35,7 @@ if ($action_obj) {
     }
 }
 
-$menu_classes_arr = ConfWrapper::value('php-bt.menu_classes_arr', []); // TODO: key name to constant
+$menu_classes_arr = ConfWrapper::getOptionalValue(\OLOG\BT\BTConstants::MODULE_NAME . '.menu_classes_arr', []); // TODO: key name to constant
 if ($menu_classes_arr) {
     foreach ($menu_classes_arr as $menu_class) {
         if (in_array(BT\InterfaceMenu::class, class_implements($menu_class))) {

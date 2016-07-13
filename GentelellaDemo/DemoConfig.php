@@ -14,7 +14,8 @@ class DemoConfig
 			'layout_class_name' => \OLOG\Gentelella\Layout::class,
             'menu_classes_arr' => [
                 DemoMenu::class
-            ]
+            ],
+            \OLOG\BT\BTConstants::BREADCRUMBS_PREFIX_ARR => []
         ];
 
         return $conf;
