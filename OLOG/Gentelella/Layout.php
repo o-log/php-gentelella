@@ -15,15 +15,11 @@ $menu_arr = [];
 $application_title = ConfWrapper::getOptionalValue(\OLOG\BT\BTConstants::MODULE_NAME . '.application_title', 'Application'); // TODO: key name to constant
 $user_name = 'User Name';
 
-$breadcrumbs_arr = [];
-$breadcrumbs_prefixes_arr = ConfWrapper::getOptionalValue(\OLOG\BT\BTConstants::MODULE_NAME . '.' . \OLOG\BT\BTConstants::BREADCRUMBS_PREFIX_ARR, []);
-foreach ($breadcrumbs_prefixes_arr as $breadcrumbs_prefix_arr) {
-    $breadcrumbs_arr = array_merge($breadcrumbs_arr, $breadcrumbs_prefix_arr);
-}
+$breadcrumbs_arr = ConfWrapper::getOptionalValue(\OLOG\BT\BTConstants::MODULE_NAME . '.' . \OLOG\BT\BTConstants::BREADCRUMBS_PREFIX_ARR, []);
 
 if ($action_obj) {
     if ($action_obj instanceof BT\InterfaceBreadcrumbs) {
-        $breadcrumbs_arr = $action_obj->currentBreadcrumbsArr();
+        $breadcrumbs_arr = array_merge($breadcrumbs_arr, $action_obj->currentBreadcrumbsArr());
     }
 
     if ($action_obj instanceof BT\InterfacePageTitle) {
